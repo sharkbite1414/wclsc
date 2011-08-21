@@ -1,0 +1,211 @@
+/*  
+Sticky Footer Solution
+by Steve Hatcher 
+http://stever.ca
+http://www.cssstickyfooter.com
+*/
+
+* {margin:0;padding:0;} 
+
+/* Tell the browser to render HTML5 elements as block */
+
+header, footer, aside, nav, article {
+	display: block;
+}
+
+html body {
+        height: 100%;
+}
+
+h1,h2,h3,h4,h5,h6,p,a {
+        text-shadow: 0px 1px 0px #fff;
+}
+
+header h1 {
+	padding-left: 12px;
+}
+
+body {
+	margin: 0 auto;
+	width: 940px;
+	font: 13px/22px Helvetica, Arial, sans-serif;
+	background: #f0f0f0;
+}
+
+h1 {
+	padding-top: 22px;
+}
+
+h2 {
+	font-size: 28px;
+	line-height: 44px;
+	padding: 22px 0;
+}
+
+h3 {
+	font-size: 18px;
+	line-height: 44px;
+	padding: 11px 0;
+}
+
+p {
+	padding-bottom: 22px;
+}
+
+ul {
+	list-style: circle;
+}
+
+header h1 {
+	color: #000;
+}
+
+nav {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	background: url("nav_background")
+}
+
+nav ul {
+	margin: 0 auto;
+	width: 940px;
+	list-style: none;
+}
+
+nav ul li {
+	float: left;
+}
+
+	nav ul li a {
+		display: block;
+		margin-right: 20px;
+		padding-top: 12px;
+		width: 160px;
+		font-size: 14px;
+		line-height: 44px;
+		text-align: center;
+		text-decoration: none;
+		color: #000;
+		text-shadow: 0px 1px 0px #fff;
+	}
+	
+		nav ul li a:hover {
+			color: #333;
+			text-shadow: 0px 1px 0px #fff;
+		}
+		
+		nav ul li.selected a {
+			color: #000;
+		}
+
+#intro {
+	margin-top: 68px;
+	height: 180px;
+	padding: 44px;
+	background: #33CCCC url("../img/swimmer.jpg");
+	background-size: 100%;
+	border-radius: 22px 0px 22px 0px;
+	-moz-box-shadow: 0px 0px 10px #000; 
+	-webkit-box-shadow: 0px 0px 10px #000; 
+	box-shadow: 0px 0px 10px #000;
+
+}
+
+#intro h2, #intro p¬† {
+	width: 336px;
+}
+
+#intro h2 {
+	padding: 12px 0 22px 0;
+	font-weight: normal;
+	color: #000;
+}
+
+#intro p {
+	padding: 22px 0 0 0;
+	color: #000;
+        font-size: 16px;
+}
+
+
+/* Twitter and fb buttons */
+.twitter-follow-button,#LikeButton {
+        position: relative;
+        left: 780px;
+}
+
+aside {
+        position: relative;
+        top: -500px;
+        left: 22px;
+        width: 200px;
+}
+
+#content {
+	display: block;
+}
+
+.main {
+	display: table;
+}
+
+.Welcome {
+	display: table-cell;
+}
+
+.Welcome p {
+	padding-right: 10px;
+}
+
+.Welcome ul {
+	padding-left: 15px;
+}
+
+.Social {
+	display: table-cell;
+}
+
+#wrap {
+        min-height: 100%;
+}
+
+	#main {
+		display: block;
+		width: 700px;
+		position: relative; 
+		left: 200px;
+		overflow: auto;
+		padding-bottom: 150px; /* must be same height as footer */ 
+}
+
+footer {
+        display: block;
+	position: relative;
+        background: #aaa;
+        padding: 12px;
+        width: 100%;
+        margin-top: 0px; /* negative value of footer height */
+        height: 150px;
+        clear: both;
+}
+	#about {
+		display: block;
+		position: relative;
+                float: left;
+		width: 100%;
+		padding-right: 22px;
+	}
+        
+        #about h3 {
+                padding-top: 0px;
+        }
+
+/*Opera Fix for sticky footer*/
+body:before {
+	content:"";
+	height:100%;
+	float:left;
+	width:0;
+	margin-top:-32767px;
+}
